@@ -1,0 +1,31 @@
+Union Types
+É comum termos funções que podem retornar ou receber tipos diferentes. Para isso usamos a barra vertical string | number | boolean.
+
+Funções
+Funções podem receber parâmetros com diferentes tipos e também podem retornar diferentes tipos de dados.
+  function isNumber(value: string | number) {
+    if (typeof value === 'number') {
+      return true;
+    } else {
+      return 'Não é número';
+    }
+  }
+
+
+DOM
+Funções que selecionam elementos do DOM geralmente retornam null como uma possibilidade de tipo, pois o TypeScript não tem acesso prévio ao DOM para saber se o elemento existe ou não.
+
+// Retorna HTMLButtonElement | null
+const button = document.querySelector('button');
+// Optional chaining
+// Executa click() se button for diferente de null/undefined
+button?.click();
+
+
+Exercicio
+
+// 1 - Crie uma função chamada toNumber
+// 2 - A função pode receber number | string
+// 3 - Se a função receber um número, retorne um número
+// 4 - Se a função receber uma string, retorne um número
+// 5 - Se ela receber algo diferente, retorne um erro. (throw "value deve ser um número ou uma string")
