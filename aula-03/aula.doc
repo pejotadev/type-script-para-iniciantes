@@ -1,0 +1,25 @@
+script.ts e tsc
+Os principais programas que executam JavaScript (browser/node), não conseguem executar TypeScript. Por isso precisamos de um compilador para gerar um arquivo JavaScript a partir de um TypeScript.
+
+npm install -g typescript
+
+Uma forma de converter um arquivo especifico é com o comando:
+
+tsc nomedoarquivo.ts
+
+Para iniciar arquivo de configuracao do ts:
+tsc --init
+
+tsconfig.json
+
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true
+  }
+}
+
+Para atualizar e compilar automaticamente
+tsc -w
+
+
