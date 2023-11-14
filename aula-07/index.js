@@ -1,4 +1,3 @@
-"use strict";
 // Exercicio
 /**
  * Defina a interface da API: https://api.origamid.dev/json/cursos.json e mostre os dados na tela.
