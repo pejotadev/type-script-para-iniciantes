@@ -21,12 +21,10 @@ async function init() {
   console.log(totalVendas);
 }
 
-function somarVendas(vendas: Venda[]) {
-  let total = 0;
-  for (const venda of vendas) {
-    total += venda[1];
-  }
-  return total;
+function somarVendas(vendas: Venda[]) : number {
+  return vendas.reduce((acc, venda) => {
+    return acc + venda[1];
+  }, 0);
 }
 
 init();
